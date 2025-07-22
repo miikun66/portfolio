@@ -1,0 +1,16 @@
+{
+  "id": {
+    "home": "Beranda",
+    "shop": "Toko",
+    "blog": "Blog",
+    "about": "Tentang Saya",
+    "body": "Ini isi body penerjemah"
+  },
+  "en": {
+    "home": "Home",
+    "shop": "Shop",
+    "blog": "Blog",
+    "about": "About Me",
+    "body": "body is beautiful"
+  }
+}

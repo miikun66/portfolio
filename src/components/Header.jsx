@@ -1,14 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import ToggleLanguage from "./ToggleLanguage";
+import { LanguageContext } from "../LanguageContext";
 
 function Header() {
+   const { currentLang } = useContext(LanguageContext);
+
   return (
     <header className="bg-gray-200 p-4">
-      <nav className="flex justify-center space-x-5">
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/about">About</Link>
+      <nav className="flex space-x-5 pl-50">
+        <Link to="/">{currentLang.home}</Link>
+        <Link to="/shop">{currentLang.shop}</Link>
+        <Link to="/blog">{currentLang.blog}</Link>
+        <Link to="/about">{currentLang.about}</Link>
+        <ToggleLanguage />
       </nav>
     </header>
   );

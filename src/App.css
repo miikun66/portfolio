@@ -46,7 +46,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: oklch(89.4% 0.057 293.283); /* background asli div */
+  background: var(--secondColor); /* background asli div */
   border-radius: inherit;
   z-index: -1;
 }
