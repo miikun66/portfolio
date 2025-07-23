@@ -4,13 +4,17 @@
     "shop": "Toko",
     "blog": "Blog",
     "about": "Tentang Saya",
-    "body": "Ini isi body penerjemah"
+    "body": "Ini isi body penerjemah",
+    "notFound": "Kembali Ke Halaman",
+    "logo": "Logo Saya"
   },
   "en": {
     "home": "Home",
     "shop": "Shop",
     "blog": "Blog",
     "about": "About Me",
-    "body": "body is beautiful"
+    "body": "body is beautiful",
+    "notFound": "Back To Home",
+    "logo": "My Logo"
   }
 }
