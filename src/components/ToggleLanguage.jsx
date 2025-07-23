@@ -7,7 +7,7 @@ function ToggleLanguage() {
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded cursor-pointer w-15 h-10"
+      className="bg-[var(--bgDark)] hover:bg-violet-700 text-white font-bold lg:py-2 lg:px-4 px-2 py-1 rounded-xl cursor-pointer lg:w-15 lg:h-10"
     >
       {language === "id" ? "EN" : "ID"}
     </button>
