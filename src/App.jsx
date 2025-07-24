@@ -10,15 +10,20 @@ import BodyTime from "./components/BodyTime";
 function App() {
   return (
     <div className="">
-      <div className="mb-20">
+      <header className="mb-20">
         <Header />
-      </div>
-      <BodyTime />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      </header>
+      <main>
+        <BodyTime />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <footer>
+        
+      </footer>
     </div>
   );
 }

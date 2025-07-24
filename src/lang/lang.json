@@ -6,7 +6,8 @@
     "about": "Tentang Saya",
     "body": "Ini isi body penerjemah",
     "notFound": "Kembali Ke Halaman",
-    "logo": "Logo Saya"
+    "logo": "Logo Saya",
+    "language": "id-ID"
   },
   "en": {
     "home": "Home",
@@ -15,6 +16,7 @@
     "about": "About Me",
     "body": "body is beautiful",
     "notFound": "Back To Home",
-    "logo": "My Logo"
+    "logo": "My Logo",
+    "language": "en-EN"
   }
 }

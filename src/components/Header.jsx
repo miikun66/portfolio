@@ -9,9 +9,15 @@ import ClockDropdown from "./ClockDropdown";
 function Header() {
   const { currentLang } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
+  const navItems = [
+    { to: "/", label: currentLang.home },
+    { to: "/shop", label: currentLang.shop },
+    { to: "/blog", label: currentLang.blog },
+    { to: "/about", label: currentLang.about },
+  ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--secondColor)]/80">
+    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--secondColor)]/80">
       <div className="max-w-7xl mx-auto lg:px-4 lg:py-3 px-1 py-1 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -29,20 +35,17 @@ function Header() {
           </Link>
         </div>
 
-        {/* Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--bgDark)]">
-          <Link className="hover:text-[var(--mainColor)]" to="/">
-            {currentLang.home}
-          </Link>
-          <Link className="hover:text-[var(--mainColor)]" to="/shop">
-            {currentLang.shop}
-          </Link>
-          <Link className="hover:text-[var(--mainColor)]" to="/blog">
-            {currentLang.blog}
-          </Link>
-          <Link className="hover:text-[var(--mainColor)]" to="/about">
-            {currentLang.about}
-          </Link>
+          <ul className="flex space-x-3 lg:space-x-12">
+            {navItems.map((item) => (
+              <li key={item.to}>
+                <Link className="hover:text-violet-700" to={item.to}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         {/*Clock*/}
@@ -88,28 +91,25 @@ function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden font-bold text-[var(--bgDark)]">
           <hr className="text-violet-400 mx-3" />
           <nav className="px-4 py-3 space-y-2">
-            <Link to="/" className="block bg-amber-200">
-              {currentLang.home}
-            </Link>
-            <Link to="/shop" className="block">
-              {currentLang.shop}
-            </Link>
-            <Link to="/blog" className="block">
-              {currentLang.blog}
-            </Link>
-            <Link to="/about" className="block">
-              {currentLang.about}
-            </Link>
+            <ul className="space-y-2">
+              {navItems.map((item) => (
+                <li key={item.to}>
+                  <Link className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" to={item.to}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <ToggleLanguage />
           </nav>
         </div>
       )}
-    </header>
+    </div>
   );
 }
 
