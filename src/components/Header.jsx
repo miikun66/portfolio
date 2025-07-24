@@ -57,7 +57,7 @@ function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[var(--bgDark)] hover:text-violet-700 focus:outline-none cursor-pointer border-2 rounded-md"
+            className="border-2 border-violet-400 focus:outline-2 focus:outline-offset-2 focus:outline-violet-400 hover:text-purple-400 transition duration-300 focus:outline-none text-violet-400 bg-[var(--bgDark)] h-8 cursor-pointer rounded-md"
           >
             <svg
               className="w-6 h-6"
