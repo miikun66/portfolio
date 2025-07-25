@@ -57,7 +57,7 @@ function ClockDropdown() {
 
         {isOpen && (
           <div className="absolute w-35 text-center bg-[var(--secondColor)] rounded-xl border-2 border-violet-700 shadow-lg p-4 z-10 text-purple-600">
-            <p>{day}</p>
+            <p className="font-bold">{day}</p>
             <hr />
             <p>{date} {month} {year}</p>
           </div>

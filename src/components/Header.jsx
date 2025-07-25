@@ -17,7 +17,7 @@ function Header() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--secondColor)]/80">
+    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--bgDark)]/80">
       <div className="max-w-7xl mx-auto lg:px-4 lg:py-3 px-1 py-1 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -28,7 +28,7 @@ function Header() {
               alt={currentLang.logo}
             />
             <img
-              className="h-10 w-auto md:hidden"
+              className="h-10 w-auto md:hidden pl-2"
               src={logoSm}
               alt={currentLang.logo}
             />
@@ -36,11 +36,11 @@ function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--bgDark)]">
+        <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--mainColor)]">
           <ul className="flex space-x-3 lg:space-x-12">
             {navItems.map((item) => (
               <li key={item.to}>
-                <Link className="hover:text-violet-700" to={item.to}>
+                <Link className="nav-link hover:text-purple-400 transition duration-300" to={item.to}>
                   {item.label}
                 </Link>
               </li>
@@ -54,7 +54,7 @@ function Header() {
         </div>
 
         {/* Hamburger Button */}
-        <div className="md:hidden">
+        <div className="md:hidden pr-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="border-2 border-violet-400 focus:outline-2 focus:outline-offset-2 focus:outline-violet-400 hover:text-purple-400 transition duration-300 focus:outline-none text-violet-400 bg-[var(--bgDark)] h-8 cursor-pointer rounded-md"
@@ -96,10 +96,13 @@ function Header() {
         <div className="md:hidden font-bold text-[var(--bgDark)]">
           <hr className="text-violet-400 mx-3" />
           <nav className="px-4 py-3 space-y-2">
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-violet-400 bg-zinc-600/50 rounded-lg ">
               {navItems.map((item) => (
                 <li key={item.to}>
-                  <Link className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" to={item.to}>
+                  <Link
+                    className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
+                    to={item.to}
+                  >
                     {item.label}
                   </Link>
                 </li>
