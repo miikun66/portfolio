@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 bg-[var(--secondColor)] md:px-10 py-5 rounded-xl border-2 border-purple-400">
         {/* Brand or Info */}
         <div className="text-center md:text-left">
-          <h2 className="text-lg font-bold">© {new Date().getFullYear()} Miikun</h2>
+          <h2 className="text-lg font-bold">&copy; {new Date().getFullYear()} Miikun</h2>
           <p className="text-sm font-bold">{currentLang.footer}.</p>
         </div>
 

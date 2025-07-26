@@ -7,15 +7,17 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import BodyTime from "./components/BodyTime";
 import ScrollButton from "./components/ScrollButton";
+import PreventInspect from "./components/PreventInspect";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="">
+    <div className="selection:bg-zinc-700 selection:text-violet-400">
       <header className="mb-20">
         <Header />
       </header>
       <main className="mx-5 lg:mx-10 border-2 mt-20 lg:mt-28 border-violet-400 rounded-xl">
+        <PreventInspect />
         <BodyTime />
         <Routes>
           <Route path="/" element={<Home />} />
