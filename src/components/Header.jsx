@@ -5,6 +5,7 @@ import { LanguageContext } from "../LanguageContext";
 import logo from "../assets/images/logo.webp";
 import logoSm from "../assets/images/favicon-96x96.png";
 import ClockDropdown from "./ClockDropdown";
+import { HiMenu, HiX } from "react-icons/hi";
 
 function Header() {
   const { currentLang } = useContext(LanguageContext);
@@ -33,22 +34,34 @@ function Header() {
         <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--mainColor)]">
           <ul className="flex space-x-3 lg:space-x-12">
             <li>
-              <Link className="nav-link hover:text-purple-400 transition duration-300" to="/">
+              <Link
+                className="nav-link hover:text-purple-400 transition duration-300"
+                to="/"
+              >
                 {currentLang.home}
               </Link>
             </li>
             <li>
-              <a className="nav-link hover:text-purple-400 transition duration-300" href="https://miistore.id/">
+              <a
+                className="nav-link hover:text-purple-400 transition duration-300"
+                href="https://miistore.id/"
+              >
                 {currentLang.shop}
               </a>
             </li>
             <li>
-              <a className="nav-link hover:text-purple-400 transition duration-300" href="https://blog.miikun.com/">
+              <a
+                className="nav-link hover:text-purple-400 transition duration-300"
+                href="https://blog.miikun.com/"
+              >
                 {currentLang.blog}
               </a>
             </li>
             <li>
-              <Link className="nav-link hover:text-purple-400 transition duration-300" to="/about">
+              <Link
+                className="nav-link hover:text-purple-400 transition duration-300"
+                to="/about"
+              >
                 {currentLang.about}
               </Link>
             </li>
@@ -64,31 +77,14 @@ function Header() {
         <div className="md:hidden pr-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="border-2 border-violet-400 focus:outline-2 focus:outline-offset-2 focus:outline-violet-400 hover:text-purple-400 transition duration-300 focus:outline-none text-violet-400 bg-[var(--bgDark)] h-8 cursor-pointer rounded-md"
+            className="border-2 border-violet-400 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-violet-400 hover:text-purple-400 transition duration-300 focus:outline-none text-violet-400 bg-[var(--bgDark)] h-8 w-8 flex items-center justify-center rounded-md"
+            aria-label="Toggle Menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            {isOpen ? (
+              <HiX className="w-6 h-6" />
+            ) : (
+              <HiMenu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -105,22 +101,34 @@ function Header() {
           <nav className="px-4 py-3 space-y-2">
             <ul className="space-y-2 text-violet-400 bg-zinc-600/50 rounded-lg">
               <li>
-                <Link className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" to="/">
+                <Link
+                  className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
+                  to="/"
+                >
                   {currentLang.home}
                 </Link>
               </li>
               <li>
-                <a className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" href="https://miistore.id/">
+                <a
+                  className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
+                  href="https://miistore.id/"
+                >
                   {currentLang.shop}
                 </a>
               </li>
               <li>
-                <a className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" href="https://blog.miikun.com/">
+                <a
+                  className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
+                  href="https://blog.miikun.com/"
+                >
                   {currentLang.blog}
                 </a>
               </li>
               <li>
-                <Link className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" to="/about">
+                <Link
+                  className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
+                  to="/about"
+                >
                   {currentLang.about}
                 </Link>
               </li>

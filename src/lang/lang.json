@@ -1,5 +1,6 @@
 {
   "id": {
+    "language": "id-ID",
     "home": "Beranda",
     "shop": "Toko",
     "blog": "Blog",
@@ -7,9 +8,10 @@
     "body": "Ini isi body penerjemah",
     "notFound": "Kembali Ke Halaman",
     "logo": "Logo Saya",
-    "language": "id-ID"
+    "footer": "Semua hak dilindungi undang-undang"
   },
   "en": {
+    "language": "en-EN",
     "home": "Home",
     "shop": "Shop",
     "blog": "Blog",
@@ -17,6 +19,6 @@
     "body": "body is beautiful",
     "notFound": "Back To Home",
     "logo": "My Logo",
-    "language": "en-EN"
+    "footer": "All rights reserved"
   }
 }

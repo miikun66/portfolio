@@ -7,7 +7,7 @@ function BodyTime() {
     const checkTime = () => {
       const now = new Date();
       const hour = now.getHours();
-      const dayTime = hour >= 5 && hour < 7;
+      const dayTime = hour >= 5 && hour < 17;
       setIsDay(dayTime);
 
       
