@@ -11,7 +11,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--bgDark)]/80">
+    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--bgDark)]">
       <div className="max-w-7xl mx-auto lg:px-4 lg:py-3 px-1 py-1 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -38,7 +38,7 @@ function Header() {
               </Link>
             </li>
             <li>
-              <a className="nav-link hover:text-purple-400 transition duration-300" href="https://shop.miikun.com/">
+              <a className="nav-link hover:text-purple-400 transition duration-300" href="https://miistore.id/">
                 {currentLang.shop}
               </a>
             </li>
@@ -110,7 +110,7 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <a className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" href="https://shop.miikun.com/">
+                <a className="hover:text-white block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg" href="https://miistore.id/">
                   {currentLang.shop}
                 </a>
               </li>
