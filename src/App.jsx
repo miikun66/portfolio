@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import BodyTime from "./components/BodyTime";
+import ScrollButton from "./components/ScrollButton";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         </Routes>
       </main>
       <footer>
-        
+        <ScrollButton />
       </footer>
     </div>
   );
