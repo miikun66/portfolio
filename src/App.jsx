@@ -13,7 +13,7 @@ function App() {
       <header className="mb-20">
         <Header />
       </header>
-      <main>
+      <main className="m-10 border-2 mt-25 border-violet-400 rounded-xl">
         <BodyTime />
         <Routes>
           <Route path="/" element={<Home />} />
