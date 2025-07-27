@@ -6,6 +6,9 @@ function Home() {
 
   return (
     <div className="p-4">
+      <div className="bg-red-300">
+
+      </div>
       <h1 className="text-2xl font-bold">{currentLang.home}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt

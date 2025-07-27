@@ -19,6 +19,7 @@ function App() {
       <main className="mx-5 lg:mx-10 border-2 mt-20 lg:mt-28 border-violet-400 rounded-xl">
         <PreventInspect />
         <BodyTime />
+        <ScrollButton />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -26,7 +27,6 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <ScrollButton />
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#A684FF"

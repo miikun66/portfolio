@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ToggleLanguage from "./ToggleLanguage";
 import { LanguageContext } from "../LanguageContext";
@@ -10,9 +10,34 @@ import { HiMenu, HiX } from "react-icons/hi";
 function Header() {
   const { currentLang } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scroll ke bawah
+        setShowHeader(false);
+      } else {
+        // Scroll ke atas
+        setShowHeader(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--bgDark)]">
+    <div
+      className={`fixed top-0 left-0 right-0 border-2 border-violet-400 lg:my-5 lg:mx-10 my-2 mx-5 rounded-xl shadow-md z-50 bg-[var(--bgDark)] transition-transform duration-500 ${
+        showHeader ? "translate-y-0" : "-translate-y-100"
+      }`}
+    >
       <div className="max-w-7xl mx-auto lg:px-4 lg:py-3 px-1 py-1 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
