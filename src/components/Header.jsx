@@ -56,7 +56,7 @@ function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--mainColor)]">
+        <nav className="hidden md:flex lg:space-x-12 space-x-3 font-bold text-[var(--mainColor)] lg:text-2xl text-xl">
           <ul className="flex space-x-3 lg:space-x-12">
             <li>
               <Link
@@ -69,7 +69,9 @@ function Header() {
             <li>
               <a
                 className="nav-link hover:text-purple-400 transition duration-300"
-                href="https://miistore.id/"
+                href="https://store.miikun.com/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {currentLang.shop}
               </a>
@@ -78,6 +80,8 @@ function Header() {
               <a
                 className="nav-link hover:text-purple-400 transition duration-300"
                 href="https://blog.miikun.com/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {currentLang.blog}
               </a>
@@ -136,7 +140,9 @@ function Header() {
               <li>
                 <a
                   className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
-                  href="https://miistore.id/"
+                  href="https://store.miikun.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {currentLang.shop}
                 </a>
@@ -145,6 +151,8 @@ function Header() {
                 <a
                   className="hover:text-white hover:translate-x-2 transition duration-300 block hover:bg-gradient-to-r from-violet-400 to-transparent p-1 rounded-lg"
                   href="https://blog.miikun.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {currentLang.blog}
                 </a>
