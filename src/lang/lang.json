@@ -8,7 +8,9 @@
     "body": "Ini isi body penerjemah",
     "notFound": "Kembali Ke Halaman",
     "logo": "Logo Miikun",
-    "footer": "Semua hak dilindungi undang-undang"
+    "footer": "Semua hak dilindungi undang-undang",
+    "say": "Hallo, Saya",
+    "descript": "Seorang pemula, berpetualang mencari jati diri dan bakat melalui konten streaming"
   },
   "en": {
     "language": "en-EN",
@@ -19,6 +21,8 @@
     "body": "body is beautiful",
     "notFound": "Back To Home",
     "logo": "Miikun Logo",
-    "footer": "All rights reserved"
+    "footer": "All rights reserved",
+    "say": "Hello, I'm",
+    "descript": "A beginner, on an adventure to find his identity and talent through streaming content"
   }
 }

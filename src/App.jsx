@@ -1,5 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -9,22 +10,28 @@ import BodyTime from "./components/BodyTime";
 import ScrollButton from "./components/ScrollButton";
 import PreventInspect from "./components/PreventInspect";
 import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="selection:bg-zinc-700 selection:text-violet-400">
       <header className="mb-20">
         <Header />
       </header>
-      <main className="mx-5 lg:mx-10 border-2 mt-20 lg:mt-28 border-violet-400 rounded-xl">
+      <main className="mx-5 lg:mx-10 mt-20 lg:mt-28">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AnimatePresence>
         <PreventInspect />
         <BodyTime />
         <ScrollButton />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <PageTransition />
       </main>
       <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
